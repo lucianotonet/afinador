@@ -1,0 +1,11 @@
+{
+    "name": "tonetlds/afinador",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Luciano Tonet",
+            "email": "tonetlds@gmail.com"
+        }
+    ],
+    "require": {}
+}

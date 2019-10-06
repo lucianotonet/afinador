@@ -1,2 +1,5 @@
-# afinador
-A Chrome experimental Tuner app based on Machine Learning
+# Afinador
+An experimental Guitar/Bass Tuner webapp with Machine Learning.
+
+---
+by [@tonetlds](https://github.com/tonetlds)
