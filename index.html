@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity=""
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <title>Afinador | Tuner</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            /* background: black; */
+        }
+
+        #canvas {
+            width: 600px;
+            height: auto;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        #defaultCanvas0 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container py-5 h-100 d-flex justify-content-between align-items-center flex-column">
+
+        <ul class="list-inline">
+            <h3>Afinador</h3>
+            <p>An experimental Tuner powered by machine learning</p>
+        </ul>
+
+        <canvas id="canvas" width="700" height="450" class=""></canvas>
+        
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a href="#">@tonetlds</a>
+            </li>            
+        </ul>
+
+    </div>
+
+
+    <script src="//unpkg.com/ml5@0.3.1/dist/ml5.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
+
+    <script type="module" src="scripts.js"></script>
+
+</body>
+
+</html>
