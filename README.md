@@ -2,4 +2,4 @@
 An experimental Guitar/Bass Tuner webapp with Machine Learning.
 
 ---
-by [@tonetlds](https://github.com/tonetlds)
+by [@lucianotonet](https://github.com/lucianotonet)
