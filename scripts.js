@@ -1,17 +1,30 @@
-'https://cdn.jsdelivr.net/gh/p5js/PitchDetection/PitchDetection_Game/model'
+var dialog = document.querySelector('dialog');
+dialog.showModal();
+
+var start = document.querySelector('#start');
+start.addEventListener('click', function () {
+  dialog.close();
+  touchStarted();
+});
+
 
 function setup() {
   const tuner = new Tuner();
+  getAudioContext().suspend();
   tuner.init();
+};
+
+function touchStarted() {
+  getAudioContext().resume();
 }
 
 class Tuner {
   constructor() {
     this.canvas = document.getElementById("canvas");
     this.ctx = this.canvas.getContext("2d");
-    this.audioContext = new AudioContext();
+    this.audioContext = null;
     this.amplitude = new p5.Amplitude();
-    // this.osc = new p5.Oscillator();
+    this.osc = new p5.Oscillator();
     this.mic = new p5.AudioIn();
 
     this.pitch;
@@ -41,6 +54,7 @@ class Tuner {
 
   init = () => {
     navigator.mediaDevices.getUserMedia({ audio: true }).then(mediaStream => {
+      this.audioContext = 'AudioContext' in window ? new AudioContext() : new webkitAudioContext()
       this.pitch = ml5.pitchDetection(
         this.model_url,
         this.audioContext,
@@ -52,8 +66,8 @@ class Tuner {
     // this.osc.setType("sine");
     // this.osc.amp(0);
     // this.osc.start();
-    this.mic.start();
 
+    this.mic.start();
     this.drawTuner();
   };
 
